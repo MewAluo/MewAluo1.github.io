@@ -1,0 +1,96 @@
+body {
+    background-image: url(../恐龙照片/丛林.jpg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/*最大盒子*/
+.box1 {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    border: none;
+    background-color: #ffffff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/*恐龙第一张代表盒子*/
+.box2 {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.box2 img {
+    width: 450px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/*恐龙基本介绍盒子*/
+.box3 {
+    flex: 1;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.box3 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.box3 ul li {
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+/*恐龙详细介绍盒子*/
+.box4 {
+    margin-top: 30px;
+}
+
+.box4 p {
+    font-weight: 500;
+    font-size: 18px;
+    color: #555;
+}
+
+.box4 h2 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.box4 ol {
+    padding-left: 20px;
+}
+
+.box4 ol li {
+    margin-bottom: 20px;
+}
+
+.box4 ul {
+    padding-left: 20px;
+}
+
+.box4 ul li {
+    margin-bottom: 10px;
+}

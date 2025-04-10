@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /*background-color: #f4f9f4;*/
+    /*background:linear-gradient(220.55deg, #9ee1ae 0%, #3a5432 100%); /*右上左下渐变*/
+    background: linear-gradient(135deg, #9ee1ae 0%, #3a5432 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+img{
+    width: 1100px;
+}
+
+.container {
+    width: 1200px;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    /*color: #28a745;*/
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #666;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.card h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.card p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.card ul {
+    list-style-type: square;
+    padding-left: 30px;
+}
+
+.activity-info table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.activity-info table th,
+.activity-info table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.activity-info table th {
+    background-color: #28a745;
+    color: white;
+}

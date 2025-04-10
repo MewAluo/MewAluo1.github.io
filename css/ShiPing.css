@@ -1,0 +1,18 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content {
+    width: 1200px;
+    background-color: yellow;
+}
+
+.content .videos {
+    margin-right: 5%;
+}
+
+.content .videos img {
+    width: 350px;
+}

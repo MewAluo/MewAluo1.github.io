@@ -1,0 +1,17 @@
+.returnbutton {
+    /*float: left;*/
+    /*display: inline-block;*/
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;   /* 确保按钮在最上层 */
+    /* 添加其他样式，如背景色、字体、大小、边框等 */
+    cursor: pointer;        /* 鼠标指针变成手形 */
+}
+
+.returnbutton img{
+    width: 100px;
+    height: 100px;
+    opacity: 0.7; /*图片半透明*/
+    object-fit: cover; /*调整图片显示方式*/
+}

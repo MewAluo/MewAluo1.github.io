@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  font-family: "Inter", sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+body {
+  background-image: url(img/bac\ 4.png);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(transparent 50%, rgb(0, 0, 0));
+}
+
+/* Background-images */
+
+.content img {
+  position: absolute;
+  width: 100%;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  display: flex; /*弹性布局*/
+  align-items: center; /*在交叉轴上的对齐方式*/
+  gap: 10px; /*弹性容器之间的间距*/
+  padding: 10px 5%; /*元素宽度的5％*/
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 30px;
+  border-bottom-left-radius: 20px; /*边框圆角半径*/
+  border-bottom-right-radius: 20px; /*边框圆角半径*/
+  backdrop-filter: blur(5px); /*模糊视觉效果*/
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); 
+}
+
+nav a {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: rgb(53, 53, 53);
+  width: 110px;
+  text-align: center;
+  padding: 15px 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+nav .login {
+  width: 135px;
+  position: relative; /* 新增，为背景图片定位做准备 */
+}
+nav .login span {
+  margin-left: 40px;
+}
+
+nav .login::before {
+  content: "";
+  position: absolute;
+  left: 10px; /* 调整距离左边的位置 */
+  top: 50%;
+  transform: translateY(-50%); /* 垂直居中 */
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/账号头像图黑.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+nav .login:hover::before {
+  background-image: url("../img/账号头像图白.png");
+}
+
+.active {
+  background-color: #2d6e3d;
+  color: white;
+}
+
+nav a:hover {
+  background-color: #2c5e49;
+  color: white;
+}
+
+nav:hover > a:not(:hover) {
+  background-color: transparent;
+  color: rgb(53, 53, 53);
+}
+
+/* 下拉菜单容器样式 */
+.dropdown {
+  position: relative; /*相对定位*/
+  display: inline-block;
+  display: flex; /*弹性布局*/
+}
+
+/* 下拉菜单内容样式 */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /*相对位置偏移幅度*/
+  background-color: #f9f9f9;
+  min-width: 130px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 10px;
+  backdrop-filter: blur(5px); /*模糊视觉效果*/
+  background-color: rgba(255, 255, 255, 0.2); /* 使用半透明背景 */
+}
+
+/* 下拉菜单链接样式 */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  width: auto;
+  border-radius: 10px;
+}
+
+/* 下拉菜单链接悬停样式 */
+.dropdown-content a:hover {
+  background-color: #2c5e49;
+  color: white;
+}
+
+/* 鼠标悬停时显示下拉菜单 */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.title {
+  position: absolute;
+  top: 40%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  
+}
+
+.title h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 15px;
+  color: white;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 4%;
+}
+
+.title h1 {
+  font-size: 9rem;
+  font-weight: 800;
+  letter-spacing: 50px;
+  text-transform: uppercase;
+  color: white;
+  /*font-family: 宋体;*/
+  text-align: center;
+  margin: -20px 0;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.7);
+  width: 70%;
+  text-align: center;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.info-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 18%;
+  z-index: 1;
+}
+
+.cta {
+  position: absolute;
+  bottom: 8%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 1;
+}
+
+.cta button {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50px;
+  height: 50px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.cta button a{ /*带你预览恐龙的故事*/
+  color: #bababa;
+}
+
+.cta button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color:rgb(53, 53, 53);
+}
+
+.slider {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.slider i {
+  padding: 0 5%;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Animations */
+@keyframes bottomIn {
+  from {
+    transform: translateY(200px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.back-1 {
+  animation: bottomIn 1s ease-out forwards;
+}
+
+.back-2 {
+  animation: bottomIn 1.3s ease-out forwards;
+}
+
+.back-3 {
+  animation: bottomIn 1.5s ease-out forwards;
+}
+
+@keyframes bottomInText {
+  from {
+    transform: translateY(500px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+h3 {
+  animation: bottomInText 1s ease-out forwards;
+}
+
+h1 {
+  animation: bottomInText 1.2s ease-out forwards;
+}
+
+p {
+  animation: bottomInText 1.2s ease-out forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+button {
+  animation: bottomInText 1.2s ease-out forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+@keyframes backgroundImage {
+  from {
+    background-position: top;
+  }
+  to {
+    background-position: 50% 14%;
+  }
+}
+
+body {
+  animation: backgroundImage 1.6s ease-out forwards;
+}
+
+@keyframes topIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+nav {
+  animation: topIn 1.2s ease-out forwards;
+}
+
+@keyframes zoomOut{
+  from {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.slider {
+  animation: zoomOut 1.2s ease-out forwards;
+}
+
+.lianxi{
+  background-color: black;
+  height: 30px;
+}

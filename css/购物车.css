@@ -1,0 +1,165 @@
+/* 全局样式 */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* 容器样式 */
+.container {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    padding: 30px;
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 标题样式 */
+h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+/* 表格样式 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background-color: #f9f9f9;
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: #fafafa;
+}
+
+/* 移除按钮样式 */
+.remove-btn {
+    background-color: #ff4d4f;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.remove-btn:hover {
+    background-color: #ff7875;
+    transform: scale(1.05);
+}
+
+/* 结算容器样式 */
+.checkout-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* 总价样式 */
+.total-price {
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.total-price span {
+    margin: 0 3px;
+}
+
+.text-gray-600 {
+    color: #777;
+}
+
+.text-green-600 {
+    color: #52c41a;
+}
+
+/* 结算按钮样式 */
+.checkout-btn {
+    background-color: #1890ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.checkout-btn:hover {
+    background-color: #40a9ff;
+    transform: scale(1.05);
+}
+
+/* 收货信息容器样式 */
+.shipping-info-container {
+    display: none;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.shipping-info-container label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.shipping-info-container input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+}
+
+.shipping-info-container input:focus {
+    border-color: #1890ff;
+    outline: none;
+}
+
+/* 确认提交按钮样式 */
+.confirm-btn {
+    background-color: #2f54eb;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.confirm-btn:hover {
+    background-color: #597ef7;
+    transform: scale(1.05);
+}

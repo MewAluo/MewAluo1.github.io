@@ -1,0 +1,307 @@
+/* 设置页面主体的背景图片，图片路径为 '../恐龙照片/丛林.jpg' */
+body {
+    background-image: url(../img/丛林背景图.jpg);
+}
+
+/* 全局样式，将所有元素的外边距和内边距设置为0，并设置字体为 '楷体' */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "楷体";
+}
+
+/* 定义一个名为 'wrap' 的类，用于包裹多个元素 */
+.wrap {
+    /* 水平居中 */
+    margin: 0 auto;
+    /* 固定宽度为1000px */
+    width: 1000px;
+    /* 最大宽度为1000px，防止在小屏幕上溢出 */
+    max-width: 1000px;
+    /* 使用flex布局 */
+    display: flex;
+    /* 允许子元素换行 */
+    flex-wrap: wrap;
+    /* 子元素在主轴上均匀分布 */
+    justify-content: space-between;
+    /* 子元素在交叉轴上顶部对齐 */
+    align-content: flex-start;
+}
+
+/* 定义一个名为 'tile' 的类，用于创建单个卡片元素 */
+.tile {
+    /* 卡片宽度为320px */
+    width: 320px;
+    /* 卡片高度为300px */
+    height: 300px;
+    /* 上下外边距为10px，左右为0 */
+    margin: 10px 0;
+    /* 卡片背景颜色 */
+    background-color: #706c6c;
+    /* 行内块级元素 */
+    display: inline-block;
+    /* 背景图片覆盖整个元素 */
+    background-size: cover;
+    /* 相对定位 */
+    position: relative;
+    /* 鼠标指针样式为手型 */
+    cursor: pointer;
+    /* 过渡效果，所有属性变化在0.4秒内完成，缓出效果 */
+    transition: all 0.4s ease-out;
+    /* 卡片阴影效果 */
+    box-shadow: 0px 35px 77px -17px rgba(0, 0, 0, 0.44);
+    /* 溢出内容隐藏 */
+    overflow: hidden;
+    /* 文字颜色为白色 */
+    color: white;
+}
+
+/* 定义 'tile' 类下的图片样式 */
+.tile img {
+    /* 图片高度为100% */
+    height: 100%;
+    /* 图片宽度为100% */
+    width: 100%;
+    /* 绝对定位 */
+    position: absolute;
+    /* 顶部对齐 */
+    top: 0;
+    /* 左侧对齐 */
+    left: 0;
+    /* 层级为0 */
+    z-index: 0;
+    /* 过渡效果，所有属性变化在0.4秒内完成，缓出效果 */
+    transition: all 0.4s ease-out;
+}
+
+/* 定义 'tile' 类下的 'text' 类样式 */
+.tile .text {
+    /* 层级为99 */
+    z-index: 99;
+    /* 绝对定位 */
+    position: absolute;
+    /* 内边距为30px */
+    padding: 30px;
+    /* 高度为元素高度减去上下内边距 */
+    height: calc(100% - 60px);
+}
+
+/* 定义 'tile' 类下的 h1 标签样式 */
+.tile .text h1 {
+    /* 字体粗细为200 */
+    font-weight: 200;
+    text-align: center;
+    /* 文字阴影效果 */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    color: black;
+    
+}
+
+/* 定义 'tile' 类下的 h2 标签样式 */
+.tile h2 {
+    /* 字体粗细为100 */
+    font-weight: 100;
+    /* 顶部外边距为20px */
+    margin-top: 20px;
+    /* 字体样式为斜体 */
+    font-style: italic;
+    /* 初始状态向右偏移200px */
+    transform: translateX(200px);
+}
+
+/* 定义 'tile' 类下的 p 标签样式 */
+.tile p {
+    /* 字体粗细为250 */
+    font-weight: 250;
+    /* 顶部外边距为10px */
+    margin-top: 10px;
+    /* 行高为20px */
+    line-height: 20px;
+    /* 初始状态向左偏移200px */
+    transform: translateX(-200px);
+    /* 过渡延迟0.2秒 */
+    transition-delay: 0.2s;
+}
+
+/* 定义 'animate-text' 类样式，用于动画效果 */
+.animate-text {
+    /* 初始透明度为0 */
+    opacity: 0;
+    /* 过渡效果，所有属性变化在0.6秒内完成，缓入缓出效果 */
+    transition: all 0.6s ease-in-out;
+}
+
+/* 定义 'tile' 类鼠标悬停时的样式 */
+.tile:hover {
+    /* 鼠标悬停时的阴影效果 */
+    box-shadow: 0px 35px 77px -17px rgba(0, 0, 0, 0.64);
+    /* 鼠标悬停时放大1.05倍 */
+    transform: scale(1.05);
+}
+
+/* 定义 'tile' 类鼠标悬停时其内部图片的样式 */
+.tile:hover img {
+    /* 鼠标悬停时图片透明度为0.2 */
+    opacity: 0.2;
+}
+
+/* 定义 'tile' 类鼠标悬停时其内部 'animate-text' 类元素的样式 */
+.tile:hover .animate-text {
+    /* 鼠标悬停时元素回到初始位置 */
+    transform: translateX(0);
+    /* 鼠标悬停时元素透明度为1 */
+    opacity: 1;
+}
+
+/* 定义 'dots' 类样式，用于创建三个小点 */
+.dots {
+    /* 绝对定位 */
+    position: absolute;
+    /* 距离底部20px */
+    bottom: 20px;
+    /* 距离右侧30px */
+    right: 30px;
+    /* 水平居中 */
+    margin: 0 auto;
+    /* 宽度为30px */
+    width: 30px;
+    /* 高度为30px */
+    height: 30px;
+    /* 文字颜色继承父元素 */
+    color: currentColor;
+    /* 使用flex布局 */
+    display: flex;
+    /* 垂直方向排列 */
+    flex-direction: column;
+    /* 子元素在交叉轴上居中对齐 */
+    align-items: center;
+    /* 子元素在主轴上均匀分布 */
+    justify-content: space-around;
+}
+
+/* 定义 'dots' 类下的 span 标签样式 */
+.dots span {
+    /* 宽度为5px */
+    width: 5px;
+    /* 高度为5px */
+    height: 5px;
+    /* 背景颜色继承父元素 */
+    background-color: currentColor;
+    /* 圆形 */
+    border-radius: 50%;
+    /* 块级元素 */
+    display: block;
+    /* 初始透明度为0 */
+    opacity: 0;
+    /* 过渡效果，位移在0.4秒内完成，透明度在0.5秒内完成 */
+    transition: transform 0.4s ease-out, opacity 0.5s ease;
+    /* 初始状态向下偏移30px */
+    transform: translateY(30px);
+}
+
+/* 定义 'tile' 类鼠标悬停时其内部 'dots' 类下 span 标签的样式 */
+.tile:hover span {
+    /* 鼠标悬停时透明度为1 */
+    opacity: 1;
+    /* 鼠标悬停时回到初始位置 */
+    transform: translateY(0px);
+}
+
+/* 定义 'dots' 类下第一个 span 标签的过渡延迟时间 */
+.dots span:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+/* 定义 'dots' 类下第二个 span 标签的过渡延迟时间 */
+.dots span:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+/* 定义 'dots' 类下第三个 span 标签的过渡延迟时间 */
+.dots span:nth-child(3) {
+    transition-delay: 0.15s;
+}
+
+.box {
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
+    float: left;
+}
+
+.box h3 {
+    margin-top: 10px;
+    float: left;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    font-size: 30px;
+}
+
+/*恐龙名称间距*/
+.a {
+    margin-left: 100px;
+}
+
+.b {
+    margin-left: 210px;
+}
+
+.c {
+    margin-left: 240px;
+}
+
+.Q {
+    margin-left: 300PX;
+}
+
+.W {
+    margin-left: 250PX;
+}
+
+/* 新增侧拉按钮样式 */
+.side-button {
+    position: fixed;
+    right: 20px;
+    top: 5%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+/* 新增侧拉窗样式 */
+.side-window {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 99;
+}
+
+/* 侧拉窗激活状态样式 */
+.side-window.active {
+    transform: translateX(0);
+}
+
+/* 侧拉窗内列表样式 */
+.side-window ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* 侧拉窗内列表项样式 */
+.side-window ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}    

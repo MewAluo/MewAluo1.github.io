@@ -1,0 +1,74 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	text-decoration: none;
+}
+
+.out{
+	margin-top: -5%; /*整个图片区域的上外边距*/
+	text-align: center;
+	/* border: 1px red solid; */
+	background-image: url(images/f60afbbc8d2e48e1a81126875fd14c61.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.out>ul{
+	position: relative;
+	/* border: 1px red solid; */
+	margin: 0px auto;
+	width: 960px;
+	height: 709px;
+	transform: scale(0.6);
+}
+.out>ul>li{
+	position: absolute;
+	opacity: 0;
+	transition: all,1s;
+}
+.out>ul>li:hover{
+	cursor: pointer;
+}
+.out>ul>li>img{
+	width: 100%;
+	height: 100%;
+}
+.out>.anNiu{
+	position: absolute;
+	border: 1px #888888 solid;
+	top: 280px;
+	width: 50px;
+	line-height: 100px;
+}
+.out>.anNiu:hover{
+	cursor: pointer;
+}
+
+#anNiu1{
+	left: 170px;
+}
+#anNiu2{
+	right: 170px;
+}
+.out>ol{
+	position: absolute;
+	top: 600px;
+	left: 48%;
+}
+.out>ol>li{
+	background-color: ghostwhite;
+	width: 10px ;
+	height: 10px;
+	float: left;
+	margin-left: 10px;
+	border-radius: 50%;
+}
+.out>ol::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+
+

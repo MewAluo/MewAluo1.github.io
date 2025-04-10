@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHZ恐龙专题网</title>
+
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="./css/首页.css">
+  <link rel="stylesheet" href="./css/LianXiStyles.css">
+</head>
+
+<body>
+
+  <header>
+    <nav>
+        <a class="nav-items active">首页</a>
+        <div class="dropdown">
+            <a href="#" class="dropbtn">恐龙介绍</a>
+            <div class="dropdown-content">
+                <a href="./三叠纪.html">三叠纪</a>
+                <a href="./侏罗纪.html">侏罗纪</a>
+                <a href="./白垩纪.html">白垩纪</a>
+            </div>
+        </div>
+        <a class="nav-items" href="./游戏.html">恐龙游戏</a>
+        <div class="dropdown">
+            <a href="#" class="dropbtn">资源推送</a>
+            <div class="dropdown-content">
+                <a href="./高清图片.html">高清图片</a>
+                <a href="./视频放送.html">视频放送</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="dropbtn">游乐推荐</a>
+            <div class="dropdown-content">
+                <a href="./博物馆.html">博物馆</a>
+                <a href="./公园.html">公园</a>
+            </div>
+        </div>
+        <a class="nav-items" href="商城主页.html">商城</a>
+        <a class="nav-items" href="活动概览.html">近期活动</a>
+        <a class="nav-items" id="contact-link">联系我们</a>
+        <a class="nav-items login" href="登录.html"><span>登录账号</span></a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <img src="img/SYbac4_1.jpg" alt="background" class="back-4">
+    <!--<img src="" alt="background" class="back-3">   -->
+
+    <img src="img/SYbac2_23.png" alt="background" class="back-2">
+    
+    <div class="title">
+      <!--<h3>The story of the dinosaurs</h3>  -->
+      <h1>Dinosaurs</h1>
+    </div>
+
+    <img src="img/SYbac1.png" alt="background" class="back-1">
+
+    <div class="info-wrap">
+      <p>
+        Welcome to the mysterious world of prehistoric behemoths!<br>
+        We'll take you on a journey through the age of dinosaurs, the unique charm of these ancient creatures, and the
+        unparalleled journey through time. We'll break the mold for you! There is not only detailed knowledge of dinosaurs,
+        but also fun and interactive elements. Let's learn in the game, discover in the exploration, redefine the
+        perception of dinosaurs, and unlock the infinite possibilities of the prehistoric world.
+      </p>
+    </div>
+
+    <div class="cta"> <!--点击下方按钮后跳转-->
+      <button>
+        <a href="登录.html">带你预览恐龙的故事</a>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+
+    <!-- 轮播图
+    <div class="slider"> 
+      <i class="fa-solid fa-chevron-left"></i>
+      <i class="fa-solid fa-chevron-right"></i>
+    </div>
+    -->
+  </div>
+
+  <!-- 弹窗内容 -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>联系方式</h2>
+      <p class="xingxi">姓名: 张三</p> <!--xingxi: 联系方式信息-->
+      <p class="xingxi">电话: 1234567890</p>
+      <p class="xingxi">邮箱: example@example.com</p>
+    </div>
+  </div>
+
+  <script>
+    // 获取元素
+    const modal = document.getElementById('myModal');
+    const contactLink = document.getElementById('contact-link');
+    const closeBtn = document.getElementsByClassName("close")[0];
+
+    // 打开弹窗
+    contactLink.onclick = function () {
+      modal.style.display = "block";
+    };
+
+    // 关闭弹窗
+    closeBtn.onclick = function () {
+      modal.style.display = "none";
+    };
+
+    // 点击弹窗外关闭弹窗
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+  
+</body>
+
+</html>
